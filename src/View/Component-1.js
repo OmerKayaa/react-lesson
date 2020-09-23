@@ -1,7 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {useState} from 'react';
 
-class Counter extends React.Component
+const Counter = () =>
+{
+    const [getState,setState] = useState(0);
+
+    const increase = (num) =>
+    {
+        setState(getState + num);
+    }
+
+    return (
+        <div class="container">
+            <p>Counter :</p><label>{getState}</label>
+            <div>
+                <button onClick={() =>increase(+1)} > Increase </button>
+                <button onClick={() =>increase(-1)} > Decrease </button>
+            </div>
+        </div>
+    );
+}
+
+/*class Counter extends React.Component
 {
     state = 
     {
@@ -27,7 +46,8 @@ class Counter extends React.Component
         var label = React.createElement('label',{}, this.state.i);
         return React.createElement('div',{className:'container'},'Counter : ', label , container);
         
-        /*return (
+        /*
+        return (
             <div class="container">
                 <p>
                     Counter :
@@ -40,8 +60,8 @@ class Counter extends React.Component
                     <button onClick={this.dec} > Decrease </button>
                 </div>
             </div>
-       );*/
+       );
     }
-}
+}*/
 
 export default Counter;

@@ -6,8 +6,6 @@ let txt = (s) => React.createElement('h1',{className:'container'},s);
 let txt1 = {className:'txt-Intro'};
 let helloworld = txt('hello world');
 
-let paragrahs = new Counter();
-
 ReactDOM.render
 (
     <React.StrictMode>
