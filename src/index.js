@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
-import Counter from './View/Component-1'
-
-let txt = (s) => React.createElement('h1',{className:'container'},s);
-let txt1 = {className:'txt-Intro'};
-let helloworld = txt('hello world');
+import Main from './View/Component-1';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 ReactDOM.render
 (
     <React.StrictMode>
-        {React.createElement('div',txt1,helloworld)}
-        <Counter />
+        <Main />
     </React.StrictMode>,
     document.getElementById('root')
 )
